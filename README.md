@@ -41,3 +41,11 @@ email :
   admin@admin.com
 password : 
   password
+
+
+To Add Fake Records:
+
+Laravel Tinker and Model Factories is Used
+
+$ php artisan tinker
+>>> factory(App\Company::class, 15)->create(['creator_id' => 1])->each(function ($u) { $u->employees()->saveMany(factory(App\Employee::class, rand(5, 12))->make(['company_id' => $u->id])); });
