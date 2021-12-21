@@ -1,14 +1,11 @@
 # Mini-CRM
+Task
 
-This project comes from Laravel Daily blog post, [How to Test Junior Laravel Developer Skills: Sample Project](http://laraveldaily.com/test-junior-laravel-developer-sample-project), a challenge (sample project) for junior laravel developer.
-
-This project built with Laravel 5.5.
-
-## User Requirements
+Basically, a project to manage companies and their employees. Mini-CRM. 
 
 * [x] Basic Laravel Auth: ability to log in as administrator
 * [x] Use database seeds to create first user with email admin@admin.com and password “password”
-* [x] CRUD functionality (Create / Read / Update / Delete) for two menu items: Companies and Employees.
+* [x] CRUD functionality (Create / Read / Update / Delete) for two tables: Companies and Employees.
 * [x] Companies DB table consists of these fields: Name (required), email, logo (minimum 100×100), website
 * [x] Employees DB table consists of these fields: First name (required), last name (required), Company (foreign key to Companies), email, phone
 * [x] Use database migrations to create those schemas above
@@ -16,17 +13,10 @@ This project built with Laravel 5.5.
 * [x] Use basic Laravel resource controllers with default methods – index, create, store etc.
 * [x] Use Laravel’s validation function, using Request classes
 * [x] Use Laravel’s pagination for showing Companies/Employees list, 10 entries per page
-* [x] Use Laravel make:auth as default Bootstrap-based design theme, but remove ability to register
 
-### Extra Tasks
 
-* [ ] Use Datatables.net library to show table – with our without server-side rendering
-* [ ] Use more complicated front-end theme like AdminLTE
-* [ ] Email notification: send email whenever new company is entered (use Mailgun or Mailtrap)
-* [x] Make the project multi-language (using resources/lang folder)
-* [x] Basic testing with phpunit (I know some would argue it should be the basics, but I disagree)
 
-## How to Install
+## Install
 
 1. Clone the repo : `git clone https://github.com/nafiesl/Mini-CRM.git`
 2. `$ cd Mini-CRM`
@@ -44,7 +34,7 @@ This project built with Laravel 5.5.
 
 #### Demo Records
 
-If you want to some demo records, we can use **Laravel Tinker** and **Model Factories**.
+ use **Laravel Tinker** and **Model Factories**.
 
 ```bash
 
@@ -52,22 +42,22 @@ $ php artisan tinker
 >>> factory(App\Company::class, 15)->create(['creator_id' => 1])->each(function ($u) { $u->employees()->saveMany(factory(App\Employee::class, rand(5, 12))->make(['company_id' => $u->id])); });
 ```
 
-Then we will get some filled records like screenshots below (except the company logo).
+We will get some filled records like screenshots below (except the company logo).
 
-## Screenshots
+## UI
 
-#### Company List
-![Company List](public/screenshots/company-list.jpg)
+### Homepage
+![image](https://user-images.githubusercontent.com/63161743/146982852-19c21b57-0eee-4bb2-8c36-391074782f94.png)
+### DashBoard![Screenshot (183)](https://user-images.githubusercontent.com/63161743/146982917-789d53a3-be6d-44cf-acd5-d9c5b2418334.png)
+### Login![Screenshot (184)](https://user-images.githubusercontent.com/63161743/146983051-46451209-2864-4d96-8130-af5afca797f3.png)
+### CompanyDetails![Screenshot (185)](https://user-images.githubusercontent.com/63161743/146983090-9c01ccea-a0f3-48fa-b3ff-278294668e1c.png)
+### CompanyDetails![Screenshot (188)](https://user-images.githubusercontent.com/63161743/146983220-311c8be1-7376-4717-b817-bddebc739b56.png)
+### Create/Edit Company![Screenshot (187)](https://user-images.githubusercontent.com/63161743/146983148-04e51806-a4a7-4ba7-8e9e-84bdcb331227.png)
+![Screenshot (186)](https://user-images.githubusercontent.com/63161743/146983168-379ca110-7906-4637-9334-3ec8eac10160.png)
+### Employee Details![Screenshot (189)](https://user-images.githubusercontent.com/63161743/146983294-9d043208-1ab7-423e-bc6c-e5331c0530dd.png)
+### Employee CRUD
+![Screenshot (190)](https://user-images.githubusercontent.com/63161743/146983333-5220d8a2-6677-4990-8c8d-de359aecae70.png)
+![Screenshot (191)](https://user-images.githubusercontent.com/63161743/146983343-6b081800-f9bc-40ca-8d5f-dc946da41b7f.png)
+![Screenshot (192)](https://user-images.githubusercontent.com/63161743/146983355-5ee5f166-62bd-4e89-a347-8d8411048509.png)
 
-#### Company Detail
-![Company Detail](public/screenshots/company-detail.jpg)
 
-#### Employee List
-![Employee List](public/screenshots/employee-list.jpg)
-
-#### Test Suites
-![Test Suites](public/screenshots/test-suites.jpg)
-
-## License
-
-This software is open-sourced software licensed under the [MIT license](LICENSE).
