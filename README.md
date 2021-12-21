@@ -23,3 +23,21 @@ Basically, a project to manage companies and their employees. Mini-CRM. -
 - [X] Use Laravel’s validation function, using Request classes
 
 - [X] Use Laravel’s pagination for showing Companies/Employees list, 10 entries  per page.
+
+
+- # Installation Steps:
+ 1. Clone the repo : git clone 
+ 2. $ cd Mini-CRM
+ 3. $ composer install
+ 4. $ cp .env.example .env
+ 5. $ php artisan key:generate
+ 6. Create database on MySQL or SQLite
+ 7. Set database credentials on .env file
+ 8. $ php artisan migrate --seed
+ 9. $ php artisan storage:link
+ 10. $ php artisan serve
+-Login with :
+email : 
+  admin@admin.com
+password : 
+  password
