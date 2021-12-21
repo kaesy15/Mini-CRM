@@ -1,4 +1,9 @@
 # Mini-CRM
+
+
+https://user-images.githubusercontent.com/63161743/146984440-a9a599a8-f604-4a99-b783-30648b81e303.mp4
+
+
 Task
 
 Basically, a project to manage companies and their employees. Mini-CRM. 
